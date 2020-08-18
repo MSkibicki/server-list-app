@@ -1,0 +1,12 @@
+{
+  "name": "server-list-api",
+  "version": "1.0.0",
+  "description": "API for managing a list of servers",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "jest"
+  },
+  "author": "Mateusz Skibicki",
+  "license": "ISC"
+}
