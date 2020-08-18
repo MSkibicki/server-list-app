@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": " US East (Virginia)",
+    "status": "ONLINE"
+  },
+  {
+    "id": 2,
+    "name": " US East (Ohio)",
+    "status": "ONLINE"
+  },
+  {
+    "id": 3,
+    "name": "US West (N. California)",
+    "status": "OFFLINE"
+  },
+  {
+    "id": 4,
+    "name": " US West (Oregon)",
+    "status": "ONLINE"
+  },
+  {
+    "id": 5,
+    "name": " Asia Pacific (Mumbai)",
+    "status": "ONLINE"
+  },
+  {
+    "id": 6,
+    "name": "Asia Pacific (Osaka-Local)",
+    "status": "ONLINE"
+  },
+  {
+    "id": 7,
+    "name": " Asia Pacific (Seoul)",
+    "status": "OFFLINE"
+  },
+  {
+    "id": 8,
+    "name": "Asia Pacific (Singapore)",
+    "status": "OFFLINE"
+  },
+  {
+    "id": 9,
+    "name": " Asia Pacific (Sydney)",
+    "status": "ONLINE"
+  },
+  {
+    "id": 10,
+    "name": " Asia Pacific (Tokyo)",
+    "status": "ONLINE"
+  },
+  {
+    "id": 11,
+    "name": "Canada (Central)",
+    "status": "ONLINE"
+  },
+  {
+    "id": 12,
+    "name": " EU (Frankfurt)",
+    "status": "ONLINE"
+  },
+  {
+    "id": 13,
+    "name": " EU (Ireland)",
+    "status": "ONLINE"
+  },
+  {
+    "id": 14,
+    "name": " EU (London)",
+    "status": "ONLINE"
+  },
+  {
+    "id": 15,
+    "name": "EU (Paris)",
+    "status": "ONLINE"
+  },
+  {
+    "id": 16,
+    "name": "South America (Sao Paulo)",
+    "status": "ONLINE"
+  }
+]
