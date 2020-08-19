@@ -56,6 +56,7 @@ const ServerList = () => {
             key={filteredServer.id}
             name={filteredServer.name}
             status={filteredServer.status}
+            id={filteredServer.id}
           />
         ))}
       </ul>
