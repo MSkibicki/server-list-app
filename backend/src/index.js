@@ -66,7 +66,7 @@ app.put(`/servers/:serverId/reboot`, (req, res) => {
 function findServer(req, res) {
   const serverId = parseInt(req.params.serverId);
 
-  const serverFound = servers.find((it) => it.id === serverId);
+  const serverFound = serverList.find((it) => it.id === serverId);
   if (!serverFound) {
     throw res.status(404).send({ errorMessage: `Server does not exist` });
   }
