@@ -4,10 +4,12 @@ import axios from "axios";
 import Loading from "./Loading";
 import Server from "./Server";
 import TableHeading from "./TableHeading";
+import ServerHeading from "./ServerHeading";
 
 const ServerList = () => {
   const [servers, setServers] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [inputValue, setInputValue] = useState("");
 
   useEffect(() => {
     let isCancelled = false;
@@ -35,14 +37,26 @@ const ServerList = () => {
     };
   }, []);
 
+  const handleInput = (e) => {
+    setInputValue(e.target.value);
+  };
+
+  let filterServers = servers.filter((server) => {
+    return server.name.toLowerCase().includes(inputValue.toLowerCase());
+  });
+
   if (loading) return <Loading />;
   return (
     <div className="server-container">
-      <h1>Server List rendered</h1>
+      <ServerHeading length={servers.length} handleInput={handleInput} />
       <TableHeading />
       <ul className="server-list">
-        {servers.map((server) => (
-          <Server key={server.id} name={server.name} status={server.status} />
+        {filterServers.map((filteredServer) => (
+          <Server
+            key={filteredServer.id}
+            name={filteredServer.name}
+            status={filteredServer.status}
+          />
         ))}
       </ul>
     </div>

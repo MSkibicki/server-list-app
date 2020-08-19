@@ -1,0 +1,33 @@
+@import "./Global.scss";
+
+.server-heading-container {
+  display: flex;
+  align-items: center;
+  width: 60%;
+  justify-content: space-between;
+  margin-top: 1em;
+
+  .server-number {
+    color: $nav-color;
+    flex-direction: column;
+
+    h1 {
+      font-size: $server-heading-font;
+    }
+
+    h3 {
+      font-size: $server-number-font;
+    }
+  }
+
+  .server-input {
+    margin-top: 2em;
+
+    input {
+      border: 2px $input-border-color solid;
+      border-radius: 15px;
+      text-align: center;
+      background-color: $body-color;
+    }
+  }
+}
