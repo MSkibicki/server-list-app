@@ -1,12 +1,26 @@
-@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Oswald:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap");
 
-$main-color: #f2f7eb;
-$additional-color: #9b9e96;
+$nav-color: #494e61;
+$body-color: #f2f3f6;
+$list-border-color: #ededf0;
+$table-heading-color: #9ca7d3;
+$online-color: #24a1a9;
+$offline-color: #ea5885;
+$nav-border-color: #757b8f;
 $black: #000;
 $white: #fff;
+
+$nav-font: 14px;
+$server-heading-font: 21px;
+$server-number-font: 15px;
+$server-name-font: 13px;
+$server-status-font: 12px;
+
+$nav-font-family: "Montserrat";
+$main-font-family: "Open Sans";
 
 body {
   margin: 0;
   padding: 0;
-  font-family: "Oswald", sans-serif;
+  font-family: $main-font-family, sans-serif;
 }
