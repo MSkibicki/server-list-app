@@ -1,0 +1,15 @@
+@import "./Global.scss";
+
+.server-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $body-color;
+
+  .server-list {
+    width: 60%;
+    padding: 0;
+    margin: 0;
+  }
+}

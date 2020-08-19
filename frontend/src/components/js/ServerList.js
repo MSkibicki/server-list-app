@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
+import "../css/ServerList.scss";
 import axios from "axios";
 import Loading from "./Loading";
 import Server from "./Server";
+import TableHeading from "./TableHeading";
 
 const ServerList = () => {
   const [servers, setServers] = useState([]);
@@ -35,9 +37,10 @@ const ServerList = () => {
 
   if (loading) return <Loading />;
   return (
-    <div>
+    <div className="server-container">
       <h1>Server List rendered</h1>
-      <ul>
+      <TableHeading />
+      <ul className="server-list">
         {servers.map((server) => (
           <Server key={server.id} name={server.name} status={server.status} />
         ))}

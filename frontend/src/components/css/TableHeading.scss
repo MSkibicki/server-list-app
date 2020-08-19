@@ -1,0 +1,25 @@
+@import "./Global.scss";
+
+.table-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 59.4%;
+  background-color: $white;
+  border: 2px solid $list-border-color;
+
+  .name {
+    width: 40%;
+    color: $table-heading-color;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: $nav-font;
+  }
+
+  .status {
+    color: $table-heading-color;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: $nav-font;
+  }
+}
