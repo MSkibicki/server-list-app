@@ -26,8 +26,8 @@
     input {
       border: 2px $input-border-color solid;
       border-radius: 15px;
-      text-align: center;
       background-color: $body-color;
+      padding-left: 2em;
     }
   }
 }

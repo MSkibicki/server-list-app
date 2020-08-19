@@ -1,5 +1,6 @@
 import React from "react";
 import "../css/Server.scss";
+import ServerMenu from "./ServerMenu";
 
 const Server = ({ name, status }) => {
   return (
@@ -8,6 +9,7 @@ const Server = ({ name, status }) => {
       <h3 className={`${status === "ONLINE" ? "online" : "offline"}`}>
         {status}
       </h3>
+      <ServerMenu />
     </li>
   );
 };
