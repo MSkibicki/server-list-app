@@ -19,4 +19,12 @@
     font-size: $server-status-font;
     font-weight: 600;
   }
+
+  h3.online {
+    color: $online-color;
+  }
+
+  h3.offline {
+    color: $offline-color;
+  }
 }

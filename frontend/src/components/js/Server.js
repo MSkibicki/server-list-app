@@ -5,7 +5,9 @@ const Server = ({ name, status }) => {
   return (
     <li className="server">
       <h1>{name}</h1>
-      <h3>{status}</h3>
+      <h3 className={`${status === "ONLINE" ? "online" : "offline"}`}>
+        {status}
+      </h3>
     </li>
   );
 };
