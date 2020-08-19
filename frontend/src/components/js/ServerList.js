@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Loading from "./Loading";
+import Server from "./Server";
 
 const ServerList = () => {
   const [servers, setServers] = useState([]);
@@ -38,10 +39,7 @@ const ServerList = () => {
       <h1>Server List rendered</h1>
       <ul>
         {servers.map((server) => (
-          <li key={server.id}>
-            <p>{server.name}</p>
-            <p>{server.status}</p>
-          </li>
+          <Server key={server.id} name={server.name} status={server.status} />
         ))}
       </ul>
     </div>
