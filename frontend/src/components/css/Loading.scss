@@ -1,0 +1,8 @@
+@import "./Global.scss";
+
+.loading {
+  text-align: center;
+  margin-top: 10em;
+  color: $main-color;
+  text-shadow: 2px 2px 2px $black;
+}
