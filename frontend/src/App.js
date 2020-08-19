@@ -1,10 +1,11 @@
 import React from "react";
 import ServerList from "./components/js/ServerList";
+import Navbar from "./components/js/Navbar";
 
 const App = () => {
   return (
     <>
-      <h1>hello</h1>
+      <Navbar />
       <ServerList />
     </>
   );

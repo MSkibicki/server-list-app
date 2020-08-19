@@ -1,0 +1,20 @@
+@import "./Global.scss";
+
+.navbar {
+  background-color: $nav-color;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  h1 {
+    color: $white;
+    font-family: $nav-font-family;
+    font-weight: 700;
+    margin: 0;
+    border-right: 2px $nav-border-color solid;
+    width: 11%;
+    padding-left: 2.5em;
+    font-size: $nav-font;
+  }
+}
