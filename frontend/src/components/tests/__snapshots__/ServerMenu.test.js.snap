@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ServerMenu /> renders correctly 1`] = `
+<div
+  className="server-icon"
+>
+  <MoreHorizIcon
+    aria-controls="simple-menu"
+    aria-haspopup="true"
+    onClick={[Function]}
+  />
+  <WithStyles(ForwardRef(Menu))
+    anchorEl={null}
+    id="simple-menu"
+    keepMounted={true}
+    onClose={[Function]}
+    open={false}
+  >
+    <WithStyles(ForwardRef(MenuItem))
+      onClick={[Function]}
+    >
+      
+          Turn On
+          
+    </WithStyles(ForwardRef(MenuItem))>
+  </WithStyles(ForwardRef(Menu))>
+</div>
+`;

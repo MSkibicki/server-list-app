@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ServerList /> renders correctly 1`] = `
+<div
+  className="server-container"
+>
+  <ServerHeading
+    handleInput={[Function]}
+    length={0}
+  />
+  <TableHeading />
+  <ul
+    className="server-list"
+  />
+</div>
+`;

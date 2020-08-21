@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Server /> renders correctly 1`] = `
+<li
+  className="server"
+>
+  <h1 />
+  <h3
+    className=""
+  />
+  <ServerMenu
+    serverOff={[Function]}
+    serverOn={[Function]}
+    serverReboot={[Function]}
+  />
+</li>
+`;

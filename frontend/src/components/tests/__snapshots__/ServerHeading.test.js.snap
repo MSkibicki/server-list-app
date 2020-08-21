@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ServerHeading /> renders correctly 1`] = `
+<div
+  className="server-heading-container"
+>
+  <div
+    className="server-number"
+  >
+    <h1>
+      Servers
+    </h1>
+    <h3>
+      Number of elements: 
+    </h3>
+  </div>
+  <div
+    className="server-input"
+  >
+    <input
+      className="search"
+      id="filter"
+      name="search"
+      placeholder="Search"
+      type="text"
+    />
+  </div>
+</div>
+`;

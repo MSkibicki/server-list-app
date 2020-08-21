@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TableHeading /> renders correctly 1`] = `
+<div
+  className="table-heading"
+>
+  <p
+    className="name"
+  >
+    name
+  </p>
+  <p
+    className="status"
+  >
+    status
+  </p>
+</div>
+`;
