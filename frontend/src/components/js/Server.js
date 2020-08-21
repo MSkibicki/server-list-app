@@ -6,7 +6,6 @@ import classNames from "classnames";
 
 const Server = ({ name, status, id }) => {
   const [serverStatus, setServerStatus] = useState(status);
-  const [isRebooting, setIsRebooting] = useState(false);
 
   const serverOn = () => {
     axios
@@ -31,20 +30,24 @@ const Server = ({ name, status, id }) => {
       })
       .then((response) => {
         setServerStatus(response.data.status);
-        setIsRebooting(true);
       });
   };
 
-  const rebootStates = () => {
-    setServerStatus("ONLINE");
-    setIsRebooting(false);
-  };
-
   useEffect(() => {
-    if (isRebooting !== false) {
-      setTimeout(rebootStates, 2000);
+    const getServerStatus = () => {
+      axios.get(`http://localhost:5000/servers/${id}`).then((response) => {
+        setServerStatus(response.data.status);
+      });
+    };
+
+    if (serverStatus === "REBOOTING") {
+      let timerId = setInterval(() => {
+        getServerStatus();
+      }, 1000);
+
+      setTimeout(() => clearInterval(timerId), 6000);
     }
-  }, [isRebooting]);
+  }, [serverStatus, id]);
 
   const serverClass = classNames({
     "online": serverStatus === "ONLINE",
