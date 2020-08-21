@@ -2,9 +2,9 @@
 
 .table-heading {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  width: 59.4%;
+  width: 59.8%;
   background-color: $white;
   border: 2px solid $list-border-color;
 
@@ -14,6 +14,7 @@
     font-weight: 600;
     text-transform: uppercase;
     font-size: $nav-font;
+    margin-left: 3em;
   }
 
   .status {
@@ -21,5 +22,11 @@
     font-weight: 600;
     text-transform: uppercase;
     font-size: $nav-font;
+  }
+}
+
+@media (max-width: 500px) {
+  .table-heading {
+    width: 79.6%;
   }
 }

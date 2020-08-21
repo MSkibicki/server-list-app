@@ -5,19 +5,20 @@
   border: 2px solid $list-border-color;
   list-style: none;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
-  margin: 0 1px;
 
   h1 {
     font-size: $server-name-font;
     font-weight: 600;
     width: 40%;
+    margin-left: 3em;
   }
 
   h3 {
     font-size: $server-status-font;
     font-weight: 600;
+    width: 50%;
   }
 
   h3.online {
@@ -25,6 +26,14 @@
   }
 
   h3.offline {
+    color: $offline-color;
+  }
+
+  h3.put-online {
+    color: $online-color;
+  }
+
+  h3.put-offline {
     color: $offline-color;
   }
 }

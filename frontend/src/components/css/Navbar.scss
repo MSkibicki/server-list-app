@@ -18,3 +18,51 @@
     font-size: $nav-font;
   }
 }
+
+@media (max-width: 1300px) {
+  .navbar {
+    h1 {
+      width: 14%;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .navbar {
+    h1 {
+      width: 18%;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .navbar {
+    h1 {
+      width: 21%;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .navbar {
+    h1 {
+      width: 25%;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .navbar {
+    h1 {
+      width: 31%;
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  .navbar {
+    h1 {
+      width: 46%;
+    }
+  }
+}
