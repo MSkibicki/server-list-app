@@ -5,7 +5,7 @@ import axios from "axios";
 import classNames from "classnames";
 
 const Server = ({ name, status, id }) => {
-  const [serverStatus, setServerStatus] = useState(null);
+  const [serverStatus, setServerStatus] = useState(status);
 
   const serverOn = () => {
     axios
@@ -24,20 +24,17 @@ const Server = ({ name, status, id }) => {
   };
 
   const serverClass = classNames({
-    "online": status === "ONLINE",
-    "offline": status === "OFFLINE",
-    "put-online": serverStatus !== null && serverStatus === "ONLINE",
-    "put-offline": serverStatus !== null && serverStatus === "OFFLINE",
+    "online": serverStatus === "ONLINE",
+    "offline": serverStatus === "OFFLINE",
   });
 
   return (
     <li className="server">
       <h1>{name}</h1>
-      <h3 className={serverClass}>{serverStatus ? serverStatus : status}</h3>
+      <h3 className={serverClass}>{serverStatus}</h3>
       <ServerMenu
         serverOn={serverOn}
         serverOff={serverOff}
-        status={status}
         serverStatus={serverStatus}
       />
     </li>
