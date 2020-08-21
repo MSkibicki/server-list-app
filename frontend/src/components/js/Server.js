@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../css/Server.scss";
 import ServerMenu from "./ServerMenu";
 import axios from "axios";
@@ -6,6 +6,7 @@ import classNames from "classnames";
 
 const Server = ({ name, status, id }) => {
   const [serverStatus, setServerStatus] = useState(status);
+  const [isRebooting, setIsRebooting] = useState(false);
 
   const serverOn = () => {
     axios
@@ -23,6 +24,28 @@ const Server = ({ name, status, id }) => {
       });
   };
 
+  const serverReboot = () => {
+    axios
+      .put(`http://localhost:5000/servers/${id}/reboot`, {
+        status: "REBOOTING",
+      })
+      .then((response) => {
+        setServerStatus(response.data.status);
+        setIsRebooting(true);
+      });
+  };
+
+  const rebootStates = () => {
+    setServerStatus("ONLINE");
+    setIsRebooting(false);
+  };
+
+  useEffect(() => {
+    if (isRebooting !== false) {
+      setTimeout(rebootStates, 2000);
+    }
+  }, [isRebooting]);
+
   const serverClass = classNames({
     "online": serverStatus === "ONLINE",
     "offline": serverStatus === "OFFLINE",
@@ -35,6 +58,7 @@ const Server = ({ name, status, id }) => {
       <ServerMenu
         serverOn={serverOn}
         serverOff={serverOff}
+        serverReboot={serverReboot}
         serverStatus={serverStatus}
       />
     </li>

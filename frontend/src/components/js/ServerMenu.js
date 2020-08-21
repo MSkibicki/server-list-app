@@ -4,7 +4,7 @@ import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 
-const ServerMenu = ({ serverOn, serverOff, serverStatus }) => {
+const ServerMenu = ({ serverOn, serverOff, serverReboot, serverStatus }) => {
   const [anchorEl, setAnchorEl] = useState(null);
 
   const handleClick = (event) => {
@@ -24,6 +24,11 @@ const ServerMenu = ({ serverOn, serverOff, serverStatus }) => {
     }
   };
 
+  const handleReboot = () => {
+    handleClose();
+    serverReboot();
+  };
+
   return (
     <div className="server-icon">
       <MoreHorizIcon
@@ -38,12 +43,14 @@ const ServerMenu = ({ serverOn, serverOff, serverStatus }) => {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleOnOff}>
+        <MenuItem onClick={serverStatus !== "REBOOTING" ? handleOnOff : null}>
           {`
           ${serverStatus === "ONLINE" ? "Turn Off" : "Turn On"}
           `}
         </MenuItem>
-        <MenuItem onClick={handleClose}>Reboot</MenuItem>
+        {serverStatus === "ONLINE" ? (
+          <MenuItem onClick={handleReboot}>Reboot</MenuItem>
+        ) : null}
       </Menu>
     </div>
   );
