@@ -48,7 +48,7 @@ const ServerList = () => {
   if (loading) return <Loading />;
   return (
     <div className="server-container">
-      <ServerHeading length={servers.length} handleInput={handleInput} />
+      <ServerHeading length={filterServers.length} handleInput={handleInput} />
       <TableHeading />
       <ul className="server-list">
         {filterServers.map((filteredServer) => (

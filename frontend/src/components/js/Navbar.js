@@ -4,7 +4,7 @@ import "../css/Navbar.scss";
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <h1>Recruitment task</h1>
+      <h1>Server List</h1>
     </nav>
   );
 };
